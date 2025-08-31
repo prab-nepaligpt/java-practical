@@ -52,3 +52,4 @@ public class Lab7 {
         System.out.println("Roll No./Section: 72/078 Sec B");
     }
 }
+// I did it prabesh Neupane
