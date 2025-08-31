@@ -9,6 +9,7 @@ class StaticDemo {
     static void showCount() { // static method
         System.out.println("Static count: " + count);
     }
+    // I did it prabesh Neupane
 
     void increment() {
         count++;
