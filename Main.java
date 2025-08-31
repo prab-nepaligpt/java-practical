@@ -1,61 +1,49 @@
-import java.util.Scanner;
+class Box {
+    // Instance variables
+    int length;
+    int breadth;
+    int height;
 
-public class MatrixAndJaggedArray {
+    // Method to print values of variables
+    void printDimensions() {
+        System.out.println("Length: " + length);
+        System.out.println("Breadth: " + breadth);
+        System.out.println("Height: " + height);
+    }
+
+    // Method to print volume
+    void printVolume() {
+        int volume = length * breadth * height;
+        System.out.println("Volume of the box: " + volume);
+    }
+}
+
+public class Main {
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        // First Box object
+        Box box1 = new Box();
+        box1.length = 5;
+        box1.breadth = 4;
+        box1.height = 3;
 
-        // Part a: Matrix input and diagonal elements
-        int[][] matrix = new int[3][3];
-        System.out.println("Enter elements of 3x3 matrix:");
+        System.out.println("Box 1:");
+        box1.printDimensions();
+        box1.printVolume();
 
-        for (int i = 0; i < 3; i++) {
-            for (int j = 0; j < 3; j++) {
-                matrix[i][j] = sc.nextInt();
-            }
-        }
+        // Second Box object
+        Box box2 = new Box();
+        box2.length = 7;
+        box2.breadth = 6;
+        box2.height = 2;
 
-        System.out.println("\nThe 3x3 Matrix:");
-        for (int i = 0; i < 3; i++) {
-            for (int j = 0; j < 3; j++) {
-                System.out.print(matrix[i][j] + " ");
-            }
-            System.out.println();
-        }
+        System.out.println("\nBox 2:");
+        box2.printDimensions();
+        box2.printVolume();
 
-        System.out.println("\nDiagonal Elements:");
-        for (int i = 0; i < 3; i++) {
-            System.out.print(matrix[i][i] + " ");
-        }
-
-        // Part b: Jagged Array
-        System.out.println("\n\nJagged Array Demonstration:");
-        int[][] jagged = new int[3][]; // declare 3 rows
-
-        jagged[0] = new int[3]; // row 1 has 3 elements
-        jagged[1] = new int[2]; // row 2 has 2 elements
-        jagged[2] = new int[4]; // row 3 has 4 elements
-
-        int value = 1;
-        for (int i = 0; i < jagged.length; i++) {
-            for (int j = 0; j < jagged[i].length; j++) {
-                jagged[i][j] = value++;
-            }
-        }
-
-        System.out.println("Jagged Array Elements:");
-        for (int i = 0; i < jagged.length; i++) {
-            for (int j = 0; j < jagged[i].length; j++) {
-                System.out.print(jagged[i][j] + " ");
-            }
-            System.out.println();
-        }
-
-        // Lab Report details
+        // Printing student details
         System.out.println("\n--- Lab Report Details ---");
-        System.out.println("Lab No.: 2");
+        System.out.println("Lab No.: 1");
         System.out.println("Name: ___________");
         System.out.println("Roll No./Section: ___________");
-
-        sc.close();
     }
 }
